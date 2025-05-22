@@ -1,0 +1,67 @@
+section{
+    font-family: poppins;
+    display: flex;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+}
+
+.container{
+    width: 300px;
+    height: 500px;
+    background-color: #f4f5f7;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container > p {
+    
+    color: #65728A;
+    font-size: 18px;
+}
+.fr-aic{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 4px;
+}
+.create-issue-btn{
+    border: none;
+    background-color: transparent;
+    color:#65728A;
+    font-weight: 600;
+}
+.create-issue-btn:hover{  
+    background-color: #c8c8ca;
+    
+}
+input{
+    width:100% ;
+    border: 1px solid rgba(25, 63, 214, 0.893);
+    resize: none;
+    height: 40px;
+    border-radius: 4px;
+    padding-bottom: 40px;
+    
+}
+.hide{
+    display: none;
+}
+
+.card{
+    background-color: white;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    color: #182a4d;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #182a4dc4;
+    overflow-y: scroll;
+}
+.card > .material-icons{
+
+    cursor: pointer;
+    font-size: 12px !important;
+}
