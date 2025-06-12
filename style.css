@@ -58,7 +58,7 @@ input{
     color: #182a4d;
     border-radius: 2px;
     box-shadow: 1px 1px 3px #182a4dc4;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 .card > .material-icons{
 

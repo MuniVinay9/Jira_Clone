@@ -1,5 +1,4 @@
 
-
 const createIssue = document.getElementById("createIssue")
 const issueInput = document.querySelector(".text-area")
 const todoContainer = document.getElementById("todo")
@@ -13,6 +12,7 @@ function toggleCreateIssueOptions(){
     issueInput.classList.toggle("hide")
 
     if(!issueInput.classList.contains("hide")){
+        
         issueInput.focus();
     }
 }
@@ -20,8 +20,6 @@ function toggleCreateIssueOptions(){
 function onBlurCreateIssueToggle(){
     createIssue.classList.toggle("hide")
     issueInput.classList.toggle("hide")
-
-    console.log("blur")
 
 }
 
@@ -40,14 +38,20 @@ function onEnter(e){
         //   <span class="material-symbols-outlined">delete</span>
         // </div>
 
-        const inputCard = document.createElement("div");
-        inputCard.draggable ="true";
-        inputCard.classList.add("card");
+        const issueCard = document.createElement("div");
         
-        inputCard.innerHTML = `<span>${issueName}</span>
+        issueCard.classList.add("card");
+        
+        issueCard.innerHTML = `<span>${issueName}</span>
          <span class="material-symbols-outlined" onclick="deleteCard(this)">delete</span>
         `
-        todoContainer.appendChild(inputCard);  
+
+        issueCard.draggable ="true";
+
+        issueCard.addEventListener("dragstart", onDragStart);
+
+        issueInput.value = "";
+        todoContainer.appendChild(issueCard);  
         issueInput.blur();
         
     }
